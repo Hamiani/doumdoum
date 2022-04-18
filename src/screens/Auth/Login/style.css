@@ -1,0 +1,37 @@
+.login-title {
+  font-weight: 900;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+
+.login-button {
+  border-color: #000000;
+  background-color: #fafafa;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.81rem;
+  font-weight: 400;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  width: 200px;
+  color: black;
+}
+.login-button:hover {
+  border-color: black;
+  background-color: black;
+  color: #fff;
+}
+.login-button:active {
+  border-color: black;
+  background-color: black;
+  color: #fff;
+}
+.login-button:focus {
+  border-color: black;
+  background-color: black;
+  color: #fff;
+}
+
+.login-input {
+  border-radius: 15px;
+}
