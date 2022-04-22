@@ -16,14 +16,10 @@ function* handleApiCall(action) {
   try {
     const response = (yield call(promise)) || {};
     const data = get(response, "data");
-    console.log("response :>> ", response);
-    // console.log("data :>> ", data);
-    //const totalItems = get(response, "totalItems", 0);
     yield put(SUCCESS(data));
     successCallback(data);
   } catch (e) {
     const errors = (e && e.errors) || e;
-    console.log("errors :>> ", errors);
 
     yield put(FAIL(errors));
     errorCallback(errors);

@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { notification } from "antd";
+import { message, notification } from "antd";
+import { useSnackbar } from "notistack";
 
 import { Context } from "../../../Shared/Context";
 import { login } from "../../../store/actions/auth";
@@ -9,9 +10,21 @@ import { PATHS } from "../../../utils/constants";
 import View from "./view";
 
 const Login = () => {
+  const { enqueueSnackbar } = useSnackbar();
+
   const dispatch = useDispatch();
   const history = useHistory();
   const { setToken, setUser } = useContext(Context);
+
+  const openNotification = (message, variant) =>
+    enqueueSnackbar(message, {
+      variant,
+      autoHideDuration: 3500,
+      anchorOrigin: {
+        vertical: "bottom",
+        horizontal: "right"
+      }
+    });
 
   const onSubmit = async (values) =>
     dispatch(
@@ -22,17 +35,11 @@ const Login = () => {
           await setUser(user);
           await setToken({ accessToken });
           history.push(PATHS.HOME);
-          notification.open({
-            type: "success",
-            message: "Connexion réussie"
-          });
+          openNotification("Connexion réussie", "success");
         },
         (response) => {
           const { message } = response;
-          notification.open({
-            type: "error",
-            message
-          });
+          openNotification(message, "error");
         }
       )
     );

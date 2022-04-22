@@ -4,11 +4,6 @@ import { Route, Redirect } from "react-router-dom";
 import { ROUTES_ACCESS, PATHS } from "../../utils/constants";
 import { isAuthenticated } from "../../utils/helpers";
 
-const WITH_ACCESS = {
-  true: ({ Component, props }) => <Component {...props} />,
-  false: () => <Redirect to={PATHS.HOME} />
-};
-
 const protect = ({ component: Component, authorization, ...rest }) => (
   <Route
     {...rest}
@@ -23,14 +18,13 @@ const protect = ({ component: Component, authorization, ...rest }) => (
 );
 const checkRedirection = ({ component: Component, authorization, ...rest }) => {
   const { route } = rest;
-  console.log("route :>> ", route);
   return (
     <Route
       {...rest}
       render={(props) =>
         isAuthenticated(authorization) &&
         get(route, "path") === PATHS.AUTH.LOGIN ? (
-          <Redirect to={PATHS.AUTH.LOGIN} />
+          <Redirect to={PATHS.HOME} />
         ) : (
           <Component {...props} />
         )
@@ -42,7 +36,6 @@ const checkRedirection = ({ component: Component, authorization, ...rest }) => {
 export const checkAuthorization = ({ routes = [], authorization = {} }) =>
   routes.map((route) => {
     const { component, access, ...rest } = route;
-    console.log("route :>> ", route);
     if (access === ROUTES_ACCESS.PRIVATE) {
       return {
         component: (props) =>

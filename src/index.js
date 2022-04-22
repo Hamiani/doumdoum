@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { SnackbarProvider } from "notistack";
+
 import store from "./store";
 
 import AuthContext from "./Shared/Context";
@@ -13,7 +15,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <AuthContext>
-        <App />
+        <SnackbarProvider maxSnack={3}>
+          <App />
+        </SnackbarProvider>
       </AuthContext>
     </Provider>
   </React.StrictMode>,

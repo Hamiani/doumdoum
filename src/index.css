@@ -235,8 +235,8 @@ code {
 }
 
 .delete_button {
-  border-color: #b60505;
-  background-color: #b60505;
+  border-color: #d82a28;
+  background-color: #d82a28;
   color: #fff;
   border-radius: 2px;
   font-size: 0.81rem;
@@ -246,8 +246,8 @@ code {
 }
 
 .delete_button:hover {
-  border-color: #b60505;
-  background-color: #b60505;
+  border-color: #d82a28;
+  background-color: #d82a28;
   color: #fff;
 }
 
@@ -283,8 +283,8 @@ code {
 }
 
 .create_button {
-  border-color: #419197;
-  background-color: #419197;
+  border-color: #233659;
+  background-color: #233659;
   color: #fff;
   border-radius: 2px;
   font-size: 0.81rem;
@@ -293,18 +293,18 @@ code {
   text-transform: uppercase;
 }
 .create_button:hover {
-  border-color: #419197;
-  background-color: #419197;
+  border-color: #233659;
+  background-color: #233659;
   color: #fff;
 }
 .create_button:active {
-  border-color: #419197;
-  background-color: #419197;
+  border-color: #233659;
+  background-color: #233659;
   color: #fff;
 }
 .create_button:focus {
-  border-color: #419197;
-  background-color: #419197;
+  border-color: #233659;
+  background-color: #233659;
   color: #fff;
 }
 

@@ -8,13 +8,13 @@ import BasicColumn from "../Charts/BasicColumn";
 
 const View = () => {
   return (
-    <div className="container__antd p-top-30">
+    <div className="container__antd">
       <Col span={24}>
         <Row justify="space-between">
-          <Col span={11}>
+          <Col xs={24} sm={24} md={24} lg={11} xl={11} xxl={11}>
             <Column />
           </Col>
-          <Col span={11}>
+          <Col xs={24} sm={24} md={24} lg={11} xl={11} xxl={11}>
             <BasicColumn />
           </Col>
         </Row>
@@ -26,10 +26,10 @@ const View = () => {
         </Row>
         <Divider />
         <Row justify="space-between" align="bottom">
-          <Col span={11}>
+          <Col xs={24} sm={24} md={24} lg={11} xl={11} xxl={11}>
             <Pie />
           </Col>
-          <Col span={11}>
+          <Col xs={24} sm={24} md={24} lg={11} xl={11} xxl={11}>
             <Donut />
           </Col>
         </Row>

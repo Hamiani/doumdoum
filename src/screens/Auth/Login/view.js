@@ -12,7 +12,7 @@ const View = ({ onSubmit }) => {
   return (
     <div className="container_antd p-top-100">
       <Row justify="center">
-        <Col span={8}>
+        <Col xs={24} sm={24} md={16} lg={8} xl={8} xxl={6}>
           <Card
             className="card-class"
             title={<h1 className="login-title text-center">Me Connecter</h1>}

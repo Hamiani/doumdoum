@@ -12,13 +12,12 @@ const Provider = (props) => {
   const [connectedUser, setConnectedUser] = useState(
     localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"))
   );
-  const setToken = (accessToken) => {
+  const setToken = ({ accessToken }) => {
     localStorage.setItem("access_token", accessToken);
     setAccessToken(accessToken);
   };
 
   const setUser = (user) => {
-    console.log("user :>> ", user);
     localStorage.setItem("user", JSON.stringify(user));
     setConnectedUser(user);
   };

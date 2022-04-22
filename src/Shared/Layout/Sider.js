@@ -33,71 +33,67 @@ const SubscriberSider = () => {
   const selectedStyle = { background: "rgb(0, 65, 70)", color: "white" };
 
   return (
-    <>
-      <Sider
-        breakpoint="lg"
-        collapsedWidth="0"
-        style={{ background: "#fafafa" }}
+    <Sider
+      breakpoint="lg"
+      collapsedWidth="0"
+      style={{
+        background: "#fafafa"
+      }}
+    >
+      <Menu
+        style={{
+          background: "#fafafa"
+        }}
+        theme="dark"
+        mode="inline"
+        defaultSelectedKeys={selectedKey}
       >
-        <Divider style={{ background: " white" }} />
-        <Menu
-          style={{ background: "#fafafa" }}
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={selectedKey}
+        <Menu.Divider style={{ background: "#f2f2f2" }} />
+        <Menu.Item
+          key={PATHS.HOME}
+          icon={<MdDashboard size={20} color="rgb(64 79 86)" />}
+          onClick={() => push(PATHS.HOME)}
+          style={PATHS.HOME === selectedKey ? selectedStyle : null}
         >
-          <Menu.Item
-            key={PATHS.HOME}
-            icon={<MdDashboard size={20} color="rgb(64 79 86)" />}
-            onClick={() => push(PATHS.HOME)}
-            style={PATHS.HOME === selectedKey ? selectedStyle : null}
-          >
-            Dashboard
-          </Menu.Item>
-          <Menu.Item
-            key={PATHS.SCRAP.LIST}
-            icon={<FaTrashRestore size={20} color="rgb(64 79 86)" />}
-            onClick={() => push(PATHS.SCRAP.LIST)}
-            style={PATHS.SCRAP.LIST === selectedKey ? selectedStyle : null}
-          >
-            SCRAP
-          </Menu.Item>
-          <Menu.Divider style={{ background: "#f2f2f2" }} />
-          <Menu.Item
-            key={PATHS.ADJUSTEMENT.LIST}
-            icon={<HiAdjustments size={20} color="rgb(64 79 86)" />}
-            onClick={() => push(PATHS.ADJUSTEMENT.LIST)}
-            style={
-              PATHS.ADJUSTEMENT.LIST === selectedKey ? selectedStyle : null
-            }
-          >
-            Adjustement
-          </Menu.Item>
-          <Menu.Divider style={{ background: "#f2f2f2" }} />
-          <Menu.Item
-            key={PATHS.CYCLE_COUNT.LIST}
-            icon={<FaRecycle size={20} color="rgb(64 79 86)" />}
-            onClick={() => push(PATHS.CYCLE_COUNT.LIST)}
-            style={
-              PATHS.CYCLE_COUNT.LIST === selectedKey ? selectedStyle : null
-            }
-          >
-            Cycle count
-          </Menu.Item>
-          <Menu.Divider style={{ background: "#f2f2f2" }} />
-          <Menu.Item
-            //key={PATHS.CYCLE_COUNT.LIST}
-            icon={<HiDocument size={20} color="rgb(64 79 86)" />}
-            // onClick={() => push(PATHS.CYCLE_MOUNT.LIST)}
-            /*  style={
+          Dashboard
+        </Menu.Item>
+        <Menu.Item
+          key={PATHS.SCRAP.LIST}
+          icon={<FaTrashRestore size={20} color="rgb(64 79 86)" />}
+          onClick={() => push(PATHS.SCRAP.LIST)}
+          style={PATHS.SCRAP.LIST === selectedKey ? selectedStyle : null}
+        >
+          SCRAP
+        </Menu.Item>
+        <Menu.Item
+          key={PATHS.ADJUSTEMENT.LIST}
+          icon={<HiAdjustments size={20} color="rgb(64 79 86)" />}
+          onClick={() => push(PATHS.ADJUSTEMENT.LIST)}
+          style={PATHS.ADJUSTEMENT.LIST === selectedKey ? selectedStyle : null}
+        >
+          Adjustement
+        </Menu.Item>
+        <Menu.Item
+          key={PATHS.CYCLE_COUNT.LIST}
+          icon={<FaRecycle size={20} color="rgb(64 79 86)" />}
+          onClick={() => push(PATHS.CYCLE_COUNT.LIST)}
+          style={PATHS.CYCLE_COUNT.LIST === selectedKey ? selectedStyle : null}
+        >
+          Cycle count
+        </Menu.Item>
+        <Menu.Divider style={{ background: "#f2f2f2" }} />
+        <Menu.Item
+          key={"1"}
+          icon={<HiDocument size={20} color="rgb(64 79 86)" />}
+          // onClick={() => push(PATHS.CYCLE_MOUNT.LIST)}
+          /*  style={
               PATHS.CYCLE_MOUNT.LIST === selectedKey ? selectedStyle : null
             } */
-          >
-            Documents
-          </Menu.Item>
-        </Menu>
-      </Sider>
-    </>
+        >
+          Documents
+        </Menu.Item>
+      </Menu>
+    </Sider>
   );
 };
 

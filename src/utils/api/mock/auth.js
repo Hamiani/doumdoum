@@ -11,7 +11,7 @@ export default {
         data: {
           accessToken: ACCESS_TOKEN,
           user: {
-            username: process.env.USERNAME
+            username: process.env.REACT_APP_USERNAME
           }
         }
       };

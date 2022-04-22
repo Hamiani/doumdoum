@@ -1,7 +1,20 @@
 import React, { useState, useMemo, memo } from "react";
-import { Table, Row, Col, Divider, Input, BackTop, Tag, Select } from "antd";
+import {
+  Table,
+  Row,
+  Col,
+  Divider,
+  Input,
+  BackTop,
+  Tag,
+  Select,
+  Tooltip,
+  Button
+} from "antd";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { AiFillFilter } from "react-icons/ai";
+import { ExportOutlined } from "@ant-design/icons";
+import { CSVLink } from "react-csv";
 
 import className from "classnames";
 import get from "lodash/get";
@@ -144,7 +157,6 @@ const RenderTable = ({
   setSelectFilter
 }) => {
   const { idle, data, loading, errors } = promotionsQuery;
-  console.log("promotionsQuery :>> ", promotionsQuery);
   if (errors) return <Unknown />;
   if (idle || loading) return <Loading />;
   return <Filter {...{ data, search, selectFilter, setSelectFilter }} />;
@@ -152,10 +164,28 @@ const RenderTable = ({
 
 const View = ({ promotionsQuery, selectFilter, setSelectFilter }) => {
   const [search, setSearch] = useState(null);
+  const { data, loading, errors } = promotionsQuery;
   return (
     <div className="container__antd p-top-20">
       <Row justify="center">
         <Col span={24}>
+          <Tooltip title="Export data as a csv file">
+            <CSVLink
+              data={data}
+              headers={columns.map(({ title, key }) => ({
+                label: title,
+                key
+              }))}
+              filename={`cycleCount-${selectFilter}`}
+            >
+              <Button className="create_button" disabled={loading || errors}>
+                <ExportOutlined />
+                Export
+              </Button>
+            </CSVLink>
+          </Tooltip>
+
+          <Divider />
           <Row justify="space-between">
             <Col span={8}>
               <Input
