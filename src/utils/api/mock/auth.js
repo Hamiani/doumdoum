@@ -1,6 +1,6 @@
 import { ACCESS_TOKEN } from "../../constants";
 
-export default {
+const api = {
   login: (data) => {
     if (
       data.username === process.env.REACT_APP_USERNAME &&
@@ -21,3 +21,4 @@ export default {
     });
   }
 };
+export default api;

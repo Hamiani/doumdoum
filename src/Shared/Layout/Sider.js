@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import { MdDashboard } from "react-icons/md";
 import { HiAdjustments } from "react-icons/hi";
 import { FaRecycle, FaTrashRestore } from "react-icons/fa";
@@ -23,6 +23,9 @@ const SELECTED_KEY = {
   },
   [PATHS.CYCLE_COUNT.LIST]: {
     key: [PATHS.CYCLE_COUNT.LIST]
+  },
+  [PATHS.DOCUMENTS]: {
+    key: [PATHS.DOCUMENTS]
   }
 };
 
@@ -85,10 +88,8 @@ const SubscriberSider = () => {
         <Menu.Item
           key={"1"}
           icon={<HiDocument size={20} color="rgb(64 79 86)" />}
-          // onClick={() => push(PATHS.CYCLE_MOUNT.LIST)}
-          /*  style={
-              PATHS.CYCLE_MOUNT.LIST === selectedKey ? selectedStyle : null
-            } */
+          onClick={() => push(PATHS.DOCUMENTS)}
+          style={PATHS.DOCUMENTS === selectedKey ? selectedStyle : null}
         >
           Documents
         </Menu.Item>

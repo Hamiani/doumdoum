@@ -1,4 +1,3 @@
-import { api } from "./fetcher";
 import mock from "./mock/auth";
 
 const { login } = mock;

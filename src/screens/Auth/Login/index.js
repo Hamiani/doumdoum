@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { message, notification } from "antd";
 import { useSnackbar } from "notistack";
 
 import { Context } from "../../../Shared/Context";

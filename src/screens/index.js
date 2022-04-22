@@ -1,3 +1,4 @@
 import Routes from "./Routes";
 
-export default (authorization) => Routes(authorization);
+const screens = (authorization) => Routes(authorization);
+export default screens;

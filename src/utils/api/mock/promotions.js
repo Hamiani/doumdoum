@@ -937,7 +937,7 @@ const data = {
     }
   ]
 };
-export default {
+const api = {
   get: (filter) =>
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -950,3 +950,5 @@ export default {
       }, 1000);
     })
 };
+
+export default api;

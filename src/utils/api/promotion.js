@@ -1,4 +1,3 @@
-import { api } from "./fetcher";
 import mock from "./mock/promotions";
 
 const { get } = mock;

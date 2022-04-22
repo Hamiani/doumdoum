@@ -11,6 +11,8 @@ export const PATHS = {
     LIST: "/cycle-count "
   },
 
+  DOCUMENTS: "/Documents",
+
   HOME: "/",
   AUTH: {
     LOGIN: "/login",

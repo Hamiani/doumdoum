@@ -1,6 +1,6 @@
 import React from "react";
 import { Pie } from "@ant-design/plots";
-import { Card, Row } from "antd";
+import { Card } from "antd";
 const data = [
   {
     type: "TEST1",

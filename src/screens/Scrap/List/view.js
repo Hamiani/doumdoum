@@ -128,7 +128,7 @@ const Filter = ({ data, search }) => {
                   .includes(search.toLowerCase()))
           )
         : data,
-    [search]
+    [search, data]
   );
 
   return (
