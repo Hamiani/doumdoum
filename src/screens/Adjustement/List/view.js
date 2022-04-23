@@ -178,7 +178,7 @@ const View = ({ promotionsQuery, selectFilter, setSelectFilter }) => {
                 label: title,
                 key
               }))}
-              filename={`$adjustements-${selectFilter}`}
+              filename={`adjustements-${selectFilter}`}
             >
               <Button className="create_button" disabled={loading || errors}>
                 <ExportOutlined />
