@@ -28,8 +28,8 @@ const data = [
     value: 5
   }
 ];
-const paletteSemanticRed = "#F4664A";
-const brandColor = "#5B8FF9";
+const paletteSemanticRed = "#DDB27C";
+const brandColor = "#19CDD7";
 const config = {
   data,
   xField: "type",

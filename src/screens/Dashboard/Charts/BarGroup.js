@@ -70,7 +70,8 @@ const BarChart = () => {
     },
     barStyle: {
       radius: [2, 2, 0, 0]
-    }
+    },
+    color: ["#19CDD7", "#DDB27C"]
   };
   return (
     <Card

@@ -31,6 +31,7 @@ const config = {
   data,
   xField: "type",
   yField: "sales",
+  color: "#19CDD7",
   label: {
     // 可手动配置 label 数据标签位置
     position: "middle",

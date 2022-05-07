@@ -7,13 +7,13 @@ import file2 from "../../Shared/assets/T2SC0246.xlsx";
 const defaultFileList = [
   {
     uid: "1",
-    name: "T2AN0167.xlsx",
+    name: "File 1",
     status: "done",
     url: file1
   },
   {
     uid: "2",
-    name: "T2SC0246.xlsx",
+    name: "File 2",
     status: "done",
     url: file2
   }

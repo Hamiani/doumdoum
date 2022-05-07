@@ -32,6 +32,7 @@ const config = {
   data,
   angleField: "value",
   colorField: "type",
+  color: ["#0081a7", "#00afb9", "#fdfcdc", "#fed9b7", "#f07167", "#bc6c25"],
   radius: 1,
   innerRadius: 0.6,
   label: {
