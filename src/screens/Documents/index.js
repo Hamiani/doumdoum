@@ -1,12 +1,40 @@
 import React from "react";
-import { Row, Col, Progress } from "antd";
+import { Row, Col, Divider, Upload } from "antd";
+
+import file1 from "../../Shared/assets/T2AN0167.xlsx";
+import file2 from "../../Shared/assets/T2SC0246.xlsx";
+
+const defaultFileList = [
+  {
+    uid: "1",
+    name: "T2AN0167.xlsx",
+    status: "done",
+    url: file1
+  },
+  {
+    uid: "2",
+    name: "T2SC0246.xlsx",
+    status: "done",
+    url: file2
+  }
+];
 
 const Documents = () => (
   <div className="container__antd p-top-20">
-    <h1>In progress</h1>
+    <h1 className="h1">Documents</h1>
+    <Divider />
     <Row justify="center">
       <Col span={24}>
-        <Progress percent={50} status="active" />
+        <Upload
+          showUploadList={{
+            showDownloadIcon: true,
+            showPreviewIcon: false,
+            showRemoveIcon: false
+          }}
+          style={{ width: "500px" }}
+          defaultFileList={defaultFileList}
+          listType="picture-card"
+        />
       </Col>
     </Row>
   </div>

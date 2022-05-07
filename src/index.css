@@ -367,3 +367,7 @@ input::-webkit-inner-spin-button {
 .m-12 {
   margin: 12px;
 }
+
+.ant-upload-list-picture-card-container {
+  width: 170px;
+}

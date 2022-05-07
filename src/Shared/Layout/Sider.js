@@ -86,7 +86,7 @@ const SubscriberSider = () => {
         </Menu.Item>
         <Menu.Divider style={{ background: "#f2f2f2" }} />
         <Menu.Item
-          key={"1"}
+          key={PATHS.DOCUMENTS}
           icon={<HiDocument size={20} color="rgb(64 79 86)" />}
           onClick={() => push(PATHS.DOCUMENTS)}
           style={PATHS.DOCUMENTS === selectedKey ? selectedStyle : null}
